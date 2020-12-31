@@ -1,4 +1,4 @@
-export interface Props {
+export interface CardProps {
   product: string
   client: string
   phone: string
