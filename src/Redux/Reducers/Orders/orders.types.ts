@@ -1,15 +1,15 @@
 import {CardProps} from '../../../Components/Card/card.types';
 
 export interface OrdersState{
-    orders?: CardProps[]
+    orders: CardProps[]
 }
 
 export enum OrdersTypes{
-    ORDERS_CHANGE_STATUS = "ORDERS_CHANGE_STATUS",
+    CHANGE_ORDER_STATUS = "CHANGE_ORDER_STATUS",
 }
 
 export type OrdersActions = 
-    | {type: OrdersTypes.ORDERS_CHANGE_STATUS}
+    | {type: OrdersTypes.CHANGE_ORDER_STATUS , payload: CardProps[]}
 
 export enum OrdersCurrentState {
     ON_HOLD = "on_hold", 

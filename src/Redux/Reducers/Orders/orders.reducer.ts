@@ -1,8 +1,9 @@
-import {OrdersState, OrdersActions} from './orders.types';
+import {OrdersState, OrdersActions, OrdersTypes} from './orders.types';
 
 const initialState: OrdersState = {
     orders: [
-        {
+        { 
+            id: 1,
             product: "Papitas",
             client: "Andros",
             phone: "123456",
@@ -11,6 +12,7 @@ const initialState: OrdersState = {
             currentState: "in_progress"
           },
           {
+            id: 2,
             product: "Salchipapa",
             client: "Andros",
             phone: "123456",
@@ -19,6 +21,7 @@ const initialState: OrdersState = {
             currentState: "on_hold"
           },
           {
+            id: 3,
             product: "Hamburguesa",
             client: "Andros",
             phone: "123456",
@@ -32,6 +35,14 @@ const initialState: OrdersState = {
 
 export default function OrdersReducer(state: OrdersState = initialState, action: OrdersActions){
     switch(action.type){
+
+      case OrdersTypes.CHANGE_ORDER_STATUS: {
+        return {
+          ...state,
+          orders: action.payload
+        }
+      }
+      
 
       default: {
         return state;

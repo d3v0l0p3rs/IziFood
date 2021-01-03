@@ -1,12 +1,11 @@
 export interface CardProps {
+  id: number
   product: string
   client: string
   phone: string
   cost: number
   deliveryType: 'tipo1' | 'tipo2'
-  currentState: orderState
+  currentState: OrderState
 }
 
-export type orderState = 'on_hold' | 'in_progress' | 'ready' | 'done' | 'cancel';
-
-export type NextOrPrev = 'PREV' | 'NEXT';
+export type OrderState = 'on_hold' | 'in_progress' | 'ready' | 'done' | 'cancel';

@@ -4,25 +4,27 @@ import "./style.scss";
 import {
   filterPendingOrders,
   filterCookingOrders,
-  filterDoneOrders,
+  filterReadyOrders,
 } from "../../Redux/Reducers/Orders/orders.selectors";
 import { useSelector } from "react-redux";
 
-export default function Home() {
+const Home: React.FC = () => {
   //selectors
   const pendingOrdersSelector = useMemo(() => filterPendingOrders, []);
   const cookingOrdersSelector = useMemo(() => filterCookingOrders, []);
-  const doneOrdersSelector = useMemo(() => filterDoneOrders, []);
+  const readyOrdersSelector = useMemo(() => filterReadyOrders, []);
 
   const pendingOrders = useSelector(pendingOrdersSelector, () => false);
   const cookingOrders = useSelector(cookingOrdersSelector, () => false);
-  const doneOrders = useSelector(doneOrdersSelector, () => false);
+  const readyOrders = useSelector(readyOrdersSelector, () => false);
 
   return (
     <div className="home-wrapper">
-      <Column columnType="pending" data={pendingOrders || []} />
-      <Column columnType="cooking" data={cookingOrders || []} />
-      <Column columnType="ready" data={doneOrders || []} />
+      <Column columnType="pending" data={pendingOrders} />
+      <Column columnType="cooking" data={cookingOrders} />
+      <Column columnType="ready" data={readyOrders} />
     </div>
   );
-}
+};
+
+export default Home;
