@@ -4,8 +4,9 @@ export interface CardProps {
   phone: string
   cost: number
   deliveryType: 'tipo1' | 'tipo2'
+  currentState: orderState
 }
 
-export type state = 'on_hold' | 'in_progress' | 'ready' | 'done' | 'cancel'
+export type orderState = 'on_hold' | 'in_progress' | 'ready' | 'done' | 'cancel';
 
-export type NextOrPrev = 'PREV' | 'NEXT'
+export type NextOrPrev = 'PREV' | 'NEXT';
