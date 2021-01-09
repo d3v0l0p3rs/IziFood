@@ -30,6 +30,7 @@ const initialState: OrdersState = {
             currentState: "ready"
           },
     ],
+    showAddOrderForm: false
 }
 
 
@@ -40,6 +41,13 @@ export default function OrdersReducer(state: OrdersState = initialState, action:
         return {
           ...state,
           orders: action.payload
+        }
+      }
+
+      case OrdersTypes.SET_ADD_ORDER_FORM_VISIBLE: {
+        return {
+          ...state,
+          showAddOrderForm: action.payload
         }
       }
       
