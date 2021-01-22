@@ -1,5 +1,6 @@
 {
   "name": "izifood",
+  "homepage":"https://d3v0l0p3rs.github.io/IziFoodUI",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,8 +22,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "sethooks": "cp scripts/pre-push.git ./.git/hooks/pre-push && chmod 755 ./.git/hooks/pre-push",
     "lint": "node_modules/.bin/eslint --ext .js,.jsx,.ts,.tsx src --color",
-    "lint-fix": "npm run lint -- --fix"
+    "lint-fix": "npm run lint -- --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +60,7 @@
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
     "eslint": "^7.18.0",
-    "eslint-plugin-react": "^7.22.0"
+    "eslint-plugin-react": "^7.22.0",
+    "gh-pages": "^3.1.0"
   }
 }
