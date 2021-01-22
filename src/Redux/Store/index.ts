@@ -1,10 +1,10 @@
-import { createStore, combineReducers,} from 'redux';
-import ordersReducer from '../Reducers/Orders/orders.reducer';
+import { createStore, combineReducers} from "redux"
+import ordersReducer from "../Reducers/Orders/orders.reducer"
 
 const rootReducer  = combineReducers({
-    ordersReducer,
-});
+  ordersReducer,
+})
 
 export type rootState = ReturnType<typeof rootReducer>;
 
-export const store = createStore(rootReducer);
+export const store = createStore(rootReducer)

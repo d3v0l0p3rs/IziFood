@@ -1,16 +1,16 @@
-import React from "react";
+import React from "react"
 
-import { CustomDialogProps } from "./customdialog.types";
+import { CustomDialogProps } from "./customdialog.types"
 
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
+import Dialog from "@material-ui/core/Dialog"
+import DialogActions from "@material-ui/core/DialogActions"
+import DialogContent from "@material-ui/core/DialogContent"
+import DialogTitle from "@material-ui/core/DialogTitle"
+import TextField from "@material-ui/core/TextField"
+import Button from "@material-ui/core/Button"
 
 const CustomDialog: React.FC<CustomDialogProps> = (
-  props: CustomDialogProps
+  props: CustomDialogProps,
 ) => {
   return (
     <Dialog open={props.show}>
@@ -31,7 +31,7 @@ const CustomDialog: React.FC<CustomDialogProps> = (
         <Button onClick={() => props.positiveAction()}>Guardar</Button>
       </DialogActions>
     </Dialog>
-  );
-};
+  )
+}
 
-export default CustomDialog;
+export default CustomDialog

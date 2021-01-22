@@ -1,9 +1,9 @@
-import React from "react";
-import "./styles.scss";
-import Home from "../Home/view";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from "react"
+import "./styles.scss"
+import Home from "../Home/view"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
-export default function App() {
+export default function App(): JSX.Element {
   return (
     <div className="app-wrapper">
       <Router>
@@ -14,5 +14,5 @@ export default function App() {
         </Switch>
       </Router>
     </div>
-  );
+  )
 }

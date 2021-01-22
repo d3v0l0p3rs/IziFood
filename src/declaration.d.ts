@@ -1,1 +1,1 @@
-declare module '*.scss'; //needed to import scss files.
+declare module "*.scss"; //needed to import scss files.
