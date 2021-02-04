@@ -12,6 +12,8 @@ import AddIcon from "@material-ui/icons/Add"
 import CustomDialog from "../CustomDialog/view"
 import { setAddOrderFormVisible } from "../../Redux/Reducers/Orders/orders.actions"
 import { rootState } from "../../Redux/Store"
+import Table from "../Table/view"
+import { tablesSelector } from "../../Redux/Reducers/Tables/tables.selectors"
 
 const Home: React.FC = () => {
   const dispatch = useDispatch()
@@ -24,6 +26,7 @@ const Home: React.FC = () => {
   const pendingOrders = useSelector(pendingOrdersSelector, () => false)
   const cookingOrders = useSelector(cookingOrdersSelector, () => false)
   const readyOrders = useSelector(readyOrdersSelector, () => false)
+  const tables = useSelector(tablesSelector, () => false)
 
   const showAddOrderForm = useSelector(
     (state: rootState) => state.ordersReducer.showAddOrderForm,
@@ -57,6 +60,16 @@ const Home: React.FC = () => {
         positiveAction={onSaveForm}
         negativeAction={onCancelSaveForm}
       />
+      <div>
+        {tables.map(table => (
+          <Table
+            key={table.id}
+            id={table.id}
+            bill={table.bill}
+            state={table.state}
+          ></Table>
+        ))}
+      </div>
     </div>
   )
 }

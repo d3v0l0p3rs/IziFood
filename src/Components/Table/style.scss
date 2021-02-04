@@ -1,0 +1,27 @@
+.table-info-wapper {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: black 0px 4px 12px;
+  padding: 2px;
+  margin-top: 10px;
+
+  .card-info-data-wrapper {
+    display: flex;
+    align-items: center;
+
+    div {
+      display: flex;
+      align-content: center;
+    }
+  }
+
+  .card-buttons-wrapper {
+    display: flex;
+    justify-content: space-around;
+    button {
+      display: flex;
+    }
+  }
+}
