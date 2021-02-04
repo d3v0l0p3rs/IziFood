@@ -1,15 +1,12 @@
 import React from "react"
 import "./style.scss"
 import { TableProps, TableState } from "./table.types"
-import { useDispatch, useSelector } from "react-redux"
-import { rootState } from "../../Redux/Store"
+import { useDispatch } from "react-redux"
 import { Button, ButtonGroup } from "@material-ui/core"
 import { changeTableStatus } from "../../Redux/Reducers/Tables/table.actions"
 
 const Table: React.FC<TableProps> = (props: TableProps) => {
   const dispatch = useDispatch()
-
-  const tables = useSelector((state: rootState) => state.tablesReducer.tables)
 
   const setTableStatus = (table: TableProps, state: TableState) => {
     dispatch(changeTableStatus({...table, state: state}))

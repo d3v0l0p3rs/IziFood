@@ -26,17 +26,17 @@ const Card: React.FC<CardProps> = (props: CardProps) => {
 
     //temporal solution
     switch (tempNewOrders[index].currentState) {
-    case "on_hold":
-      newStatus = "in_progress"
-      break
+      case "on_hold":
+        newStatus = "in_progress"
+        break
 
-    case "in_progress":
-      newStatus = "ready"
-      break
+      case "in_progress":
+        newStatus = "ready"
+        break
 
-    default:
-      newStatus = "on_hold"
-      break
+      default:
+        newStatus = "on_hold"
+        break
     }
 
     tempNewOrders[index] = {
@@ -54,17 +54,17 @@ const Card: React.FC<CardProps> = (props: CardProps) => {
 
     //temporal solution
     switch (tempNewOrders[index].currentState) {
-    case "in_progress":
-      newStatus = "on_hold"
-      break
+      case "in_progress":
+        newStatus = "on_hold"
+        break
 
-    case "ready":
-      newStatus = "in_progress"
-      break
+      case "ready":
+        newStatus = "in_progress"
+        break
 
-    default:
-      newStatus = "on_hold"
-      break
+      default:
+        newStatus = "on_hold"
+        break
     }
 
     tempNewOrders[index] = {

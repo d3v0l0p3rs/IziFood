@@ -14,7 +14,7 @@ export const filterPendingOrders = createSelector(
 export const filterCookingOrders = createSelector(
   [ordersSelector],
   (orders) => {
-    return orders?.filter(order =>{ return order.currentState === OrdersCurrentState.IN_PROGRESS })
+    return orders?.filter(order => order.currentState === OrdersCurrentState.IN_PROGRESS)
   })
 
 export const filterReadyOrders = createSelector(

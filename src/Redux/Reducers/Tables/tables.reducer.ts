@@ -15,7 +15,7 @@ const initialState: TablesState = {
       bill: 3,
       state: "reserved",
     },
-  ]
+  ],
 }
 
 
@@ -28,7 +28,7 @@ export default function tablesReducer(
       return {
         ...state,
         tables: state.tables.map(
-          table => table.id === action.payload.id ? {...table, state: action.payload.state} : table
+          table => table.id === action.payload.id ? {...table, state: action.payload.state} : table,
         ),
       }
     }
