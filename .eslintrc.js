@@ -23,18 +23,19 @@ module.exports = {
     "rules": {
         "indent": [
             "warn",
-            2
+            2,
+            {"SwitchCase": 1}
         ],
         "linebreak-style": [
-            "error",
+            "warn",
             "unix"
         ],
         "quotes": [
-            "error",
+            "warn",
             "double"
         ],
         "semi": [
-            "error",
+            "warn",
             "never"
         ],
         "no-trailing-spaces": [
@@ -53,7 +54,7 @@ module.exports = {
         "max-len": [
             "warn",
             {
-                "code": 100
+                "code": 120
             }
         ]
     }

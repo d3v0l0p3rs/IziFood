@@ -46,32 +46,32 @@ const initialState: OrdersState = {
 export default function OrdersReducer(
   state: OrdersState = initialState,
   action: OrdersActions,
-): OrdersState{
-  switch(action.type){
+): OrdersState {
+  switch (action.type) {
 
-  case OrdersTypes.CHANGE_ORDER_STATUS: {
-    return {
-      ...state,
-      orders: action.payload,
+    case OrdersTypes.CHANGE_ORDER_STATUS: {
+      return {
+        ...state,
+        orders: action.payload,
+      }
     }
-  }
 
-  case OrdersTypes.SET_ADD_ORDER_FORM_VISIBLE: {
-    return {
-      ...state,
-      showAddOrderForm: action.payload,
+    case OrdersTypes.SET_ADD_ORDER_FORM_VISIBLE: {
+      return {
+        ...state,
+        showAddOrderForm: action.payload,
+      }
     }
-  }
 
-  case OrdersTypes.SET_ADD_ORDER: {
-    return {
-      ...state,
-      orders: action.payload
+    case OrdersTypes.SET_ADD_ORDER: {
+      return {
+        ...state,
+        orders: action.payload,
+      }
     }
-  }
 
-  default: {
-    return state
-  }
+    default: {
+      return state
+    }
   }
 }

@@ -9,9 +9,9 @@ import AllInboxIcon from "@material-ui/icons/AllInbox"
 import HourglassEmptyIcon from "@material-ui/icons/HourglassEmpty"
 import NavigateNextIcon from "@material-ui/icons/NavigateNext"
 import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore"
-import { changeOrderStatus } from "../../Redux/Reducers/Orders/orders.actions"
+import { changeOrderStatus } from "../../../../Redux/Reducers/Orders/orders.actions"
 import { useDispatch, useSelector } from "react-redux"
-import { rootState } from "../../Redux/Store"
+import { rootState } from "../../../../Redux/Store"
 
 const Card: React.FC<CardProps> = (props: CardProps) => {
   const dispatch = useDispatch()
@@ -26,17 +26,17 @@ const Card: React.FC<CardProps> = (props: CardProps) => {
 
     //temporal solution
     switch (tempNewOrders[index].currentState) {
-    case "on_hold":
-      newStatus = "in_progress"
-      break
+      case "on_hold":
+        newStatus = "in_progress"
+        break
 
-    case "in_progress":
-      newStatus = "ready"
-      break
+      case "in_progress":
+        newStatus = "ready"
+        break
 
-    default:
-      newStatus = "on_hold"
-      break
+      default:
+        newStatus = "on_hold"
+        break
     }
 
     tempNewOrders[index] = {
@@ -54,17 +54,17 @@ const Card: React.FC<CardProps> = (props: CardProps) => {
 
     //temporal solution
     switch (tempNewOrders[index].currentState) {
-    case "in_progress":
-      newStatus = "on_hold"
-      break
+      case "in_progress":
+        newStatus = "on_hold"
+        break
 
-    case "ready":
-      newStatus = "in_progress"
-      break
+      case "ready":
+        newStatus = "in_progress"
+        break
 
-    default:
-      newStatus = "on_hold"
-      break
+      default:
+        newStatus = "on_hold"
+        break
     }
 
     tempNewOrders[index] = {

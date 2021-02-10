@@ -1,11 +1,11 @@
-import {CardProps} from "../../../Components/Card/card.types"
+import {CardProps} from "../../../Components/App/Components/Card/card.types"
 
-export interface OrdersState{
+export interface OrdersState {
     orders: CardProps[]
     showAddOrderForm: boolean
 }
 
-export enum OrdersTypes{
+export enum OrdersTypes {
     CHANGE_ORDER_STATUS = "CHANGE_ORDER_STATUS",
     SET_ADD_ORDER_FORM_VISIBLE = "SET_ADD_ORDER_FORM_VISIBLE",
     SET_ADD_ORDER = "SET_ADD_ORDER",
@@ -18,7 +18,7 @@ export type OrdersActions =
 
 export enum OrdersCurrentState {
     ON_HOLD = "on_hold",
-    IN_PROGRESS= "in_progress",
+    IN_PROGRESS = "in_progress",
     READY = "ready",
     DONE = "done",
     CANCEL = "cancel",
