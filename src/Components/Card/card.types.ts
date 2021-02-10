@@ -1,8 +1,11 @@
 export interface CardProps {
   id: number
-  product: string
+  productList: string[]
+  note? : string
   client: string
   phone: string
+  address: string
+  neighborhood : string
   cost: number
   deliveryType: "tipo1" | "tipo2"
   currentState: OrderState

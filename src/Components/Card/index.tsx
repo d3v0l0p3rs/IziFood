@@ -90,7 +90,7 @@ const Card: React.FC<CardProps> = (props: CardProps) => {
           <FastfoodIcon />
         </div>
         <div>
-          <span>{props.product}</span>
+          <span>{props.productList}</span>
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Card from "../Card/view"
+import Card from "../Card"
 import { CardProps } from "../Card/card.types"
 import { ColumnProps, Order, Filter } from "./column.types"
 import "./style.scss"
@@ -67,9 +67,12 @@ const Column: React.FC<ColumnProps> = (props: ColumnProps) => {
         {props.data.map((data, idx) => (
           <Card
             id={data.id}
-            product={data.product}
+            productList={data.productList}
             client={data.client}
             phone={data.phone}
+            note ={data.note}
+            address = {data.address}
+            neighborhood = {data.neighborhood}
             cost={data.cost}
             deliveryType={data.deliveryType}
             currentState={data.currentState}

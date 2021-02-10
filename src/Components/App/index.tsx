@@ -1,6 +1,6 @@
 import React from "react"
 import "./styles.scss"
-import Home from "../Home/view"
+import Home from "../Home"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 export default function App(): JSX.Element {

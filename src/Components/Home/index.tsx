@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from "react"
-import Column from "../Column/view"
+import Column from "../Column"
 import "./style.scss"
 import {
   filterPendingOrders,
@@ -9,7 +9,7 @@ import {
 import { useDispatch, useSelector } from "react-redux"
 import Fab from "@material-ui/core/Fab"
 import AddIcon from "@material-ui/icons/Add"
-import CustomDialog from "../CustomDialog/view"
+import CustomDialog from "../CustomDialog"
 import { setAddOrderFormVisible } from "../../Redux/Reducers/Orders/orders.actions"
 import { rootState } from "../../Redux/Store"
 

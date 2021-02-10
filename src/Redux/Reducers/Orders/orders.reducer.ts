@@ -4,30 +4,39 @@ const initialState: OrdersState = {
   orders: [
     {
       id: 1,
-      product: "Papitas",
+      productList: ["Papitas"],
       client: "Andros",
       phone: "123456",
+      note : "Extra salsa",
+      address: "Carrera careverga",
+      neighborhood : "Calima",
       cost: 1234,
       deliveryType: "tipo1",
       currentState: "in_progress",
     },
     {
       id: 2,
-      product: "Salchipapa",
+      productList: ["Salchipapa"],
       client: "Andros",
       phone: "123456",
+      note : "Extra salsa",
+      address: "Carrera careverga",
+      neighborhood : "Calima",
       cost: 1234,
       deliveryType: "tipo1",
       currentState: "on_hold",
     },
     {
       id: 3,
-      product: "Hamburguesa",
+      productList: ["Hamburguesa"],
       client: "Andros",
       phone: "123456",
+      note: "adasdasd",
+      address: "Carrera careverga",
+      neighborhood : "Calima",
       cost: 1234,
       deliveryType: "tipo1",
-      currentState: "ready",
+      currentState: "on_hold",
     },
   ],
   showAddOrderForm: false,
@@ -51,6 +60,13 @@ export default function OrdersReducer(
     return {
       ...state,
       showAddOrderForm: action.payload,
+    }
+  }
+
+  case OrdersTypes.SET_ADD_ORDER: {
+    return {
+      ...state,
+      orders: action.payload
     }
   }
 
