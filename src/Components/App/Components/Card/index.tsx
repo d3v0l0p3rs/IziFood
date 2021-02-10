@@ -9,9 +9,9 @@ import AllInboxIcon from "@material-ui/icons/AllInbox"
 import HourglassEmptyIcon from "@material-ui/icons/HourglassEmpty"
 import NavigateNextIcon from "@material-ui/icons/NavigateNext"
 import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore"
-import { changeOrderStatus } from "../../Redux/Reducers/Orders/orders.actions"
+import { changeOrderStatus } from "../../../../Redux/Reducers/Orders/orders.actions"
 import { useDispatch, useSelector } from "react-redux"
-import { rootState } from "../../Redux/Store"
+import { rootState } from "../../../../Redux/Store"
 
 const Card: React.FC<CardProps> = (props: CardProps) => {
   const dispatch = useDispatch()
@@ -90,7 +90,7 @@ const Card: React.FC<CardProps> = (props: CardProps) => {
           <FastfoodIcon />
         </div>
         <div>
-          <span>{props.product}</span>
+          <span>{props.productList}</span>
         </div>
       </div>
 

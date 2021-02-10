@@ -1,5 +1,5 @@
 import { createSelector } from "reselect"
-import { CardProps } from "../../../Components/Card/card.types"
+import { CardProps } from "../../../Components/App/Components/Card/card.types"
 import { rootState } from "../../Store"
 import {OrdersCurrentState} from "./orders.types"
 

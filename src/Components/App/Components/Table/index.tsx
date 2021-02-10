@@ -3,7 +3,7 @@ import "./style.scss"
 import { TableProps, TableState } from "./table.types"
 import { useDispatch } from "react-redux"
 import { Button, ButtonGroup } from "@material-ui/core"
-import { changeTableStatus } from "../../Redux/Reducers/Tables/table.actions"
+import { changeTableStatus } from "../../../../Redux/Reducers/Tables/table.actions"
 
 const Table: React.FC<TableProps> = (props: TableProps) => {
   const dispatch = useDispatch()

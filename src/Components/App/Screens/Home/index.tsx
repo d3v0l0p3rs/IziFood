@@ -1,19 +1,19 @@
 import React, { useCallback, useMemo } from "react"
-import Column from "../Column/view"
+import Column from "../../Components/Column"
 import "./style.scss"
 import {
   filterPendingOrders,
   filterCookingOrders,
   filterReadyOrders,
-} from "../../Redux/Reducers/Orders/orders.selectors"
+} from "../../../../Redux/Reducers/Orders/orders.selectors"
 import { useDispatch, useSelector } from "react-redux"
 import Fab from "@material-ui/core/Fab"
 import AddIcon from "@material-ui/icons/Add"
-import CustomDialog from "../CustomDialog/view"
-import { setAddOrderFormVisible } from "../../Redux/Reducers/Orders/orders.actions"
-import { rootState } from "../../Redux/Store"
-import Table from "../Table/view"
-import { tablesSelector } from "../../Redux/Reducers/Tables/tables.selectors"
+import CustomDialog from "../../Components/CustomDialog"
+import { setAddOrderFormVisible } from "../../../../Redux/Reducers/Orders/orders.actions"
+import { rootState } from "../../../../Redux/Store"
+import Table from "../../Components/Table"
+import { tablesSelector } from "../../../../Redux/Reducers/Tables/tables.selectors"
 
 const Home: React.FC = () => {
   const dispatch = useDispatch()
