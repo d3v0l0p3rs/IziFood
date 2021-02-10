@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/IziFoodUI/static/css/main.8ace5b8a.chunk.css",
-    "main.js": "/IziFoodUI/static/js/main.72d7b4d5.chunk.js",
-    "main.js.map": "/IziFoodUI/static/js/main.72d7b4d5.chunk.js.map",
+    "main.css": "/IziFoodUI/static/css/main.1600e6df.chunk.css",
+    "main.js": "/IziFoodUI/static/js/main.3043ed16.chunk.js",
+    "main.js.map": "/IziFoodUI/static/js/main.3043ed16.chunk.js.map",
     "runtime-main.js": "/IziFoodUI/static/js/runtime-main.9b4e7889.js",
     "runtime-main.js.map": "/IziFoodUI/static/js/runtime-main.9b4e7889.js.map",
-    "static/js/2.cd66ba3d.chunk.js": "/IziFoodUI/static/js/2.cd66ba3d.chunk.js",
-    "static/js/2.cd66ba3d.chunk.js.map": "/IziFoodUI/static/js/2.cd66ba3d.chunk.js.map",
+    "static/js/2.8124dbbc.chunk.js": "/IziFoodUI/static/js/2.8124dbbc.chunk.js",
+    "static/js/2.8124dbbc.chunk.js.map": "/IziFoodUI/static/js/2.8124dbbc.chunk.js.map",
     "index.html": "/IziFoodUI/index.html",
-    "static/css/main.8ace5b8a.chunk.css.map": "/IziFoodUI/static/css/main.8ace5b8a.chunk.css.map",
-    "static/js/2.cd66ba3d.chunk.js.LICENSE.txt": "/IziFoodUI/static/js/2.cd66ba3d.chunk.js.LICENSE.txt"
+    "static/css/main.1600e6df.chunk.css.map": "/IziFoodUI/static/css/main.1600e6df.chunk.css.map",
+    "static/js/2.8124dbbc.chunk.js.LICENSE.txt": "/IziFoodUI/static/js/2.8124dbbc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9b4e7889.js",
-    "static/js/2.cd66ba3d.chunk.js",
-    "static/css/main.8ace5b8a.chunk.css",
-    "static/js/main.72d7b4d5.chunk.js"
+    "static/js/2.8124dbbc.chunk.js",
+    "static/css/main.1600e6df.chunk.css",
+    "static/js/main.3043ed16.chunk.js"
   ]
 }
