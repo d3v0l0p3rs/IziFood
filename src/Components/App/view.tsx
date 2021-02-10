@@ -1,6 +1,7 @@
 import React from "react"
 import "./styles.scss"
 import Home from "../Home/view"
+import Login from "../Login/view"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 export default function App(): JSX.Element {
@@ -8,6 +9,9 @@ export default function App(): JSX.Element {
     <div className="app-wrapper">
       <Router>
         <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
