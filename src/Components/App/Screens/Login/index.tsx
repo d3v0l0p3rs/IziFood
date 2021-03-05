@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { loginUser } from "./login"
 import "./style.scss"
 
-export default function Login({ setToken }: any) {
+export default function Login({ setToken }: any): JSX.Element {
   const [username, setUserName] = useState<string>()
   const [password, setPassword] = useState<string>()
 

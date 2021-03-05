@@ -14,7 +14,7 @@ import { rootState } from "../../../../Redux/Store"
 import styles from "./styles.module.scss"
 import CustomInput from "../CustomInput"
 
-export default function CustomDialog(props :CustomDialogProps) {
+export default function CustomDialog(props :CustomDialogProps): JSX.Element {
   const dispatch = useDispatch()
   const currentCards = useSelector(
     (state: rootState) => state.ordersReducer.orders,
