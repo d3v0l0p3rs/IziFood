@@ -131,16 +131,10 @@ const Card: React.FC<CardProps> = (props: CardProps) => {
       </div>
 
       <div className="card-buttons-wrapper">
-        <button
-          onClick={() => setPreviousOrderStatus(props.id)}
-          disabled={props.currentState === "on_hold"}
-        >
+        <button onClick={() => setPreviousOrderStatus(props.id)} disabled={props.currentState === "on_hold"}>
           <NavigateBeforeIcon />
         </button>
-        <button
-          onClick={() => setNextOrderStatus(props.id)}
-          disabled={props.currentState === "ready"}
-        >
+        <button onClick={() => setNextOrderStatus(props.id)} disabled={props.currentState === "ready"}>
           <NavigateNextIcon />
         </button>
       </div>

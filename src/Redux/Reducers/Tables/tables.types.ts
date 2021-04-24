@@ -1,19 +1,20 @@
 import { TableProps } from "../../../Components/App/Components/Table/table.types"
 
 export interface TablesState {
-    tables: TableProps[]
+  tables: TableProps[]
 }
 
 export enum TablesTypes {
-    CHANGE_TABLE_STATUS = "CHANGE_TABLE_STATUS"
+  CHANGE_TABLE_STATUS = "CHANGE_TABLE_STATUS",
 }
 
 export type TablesActions = {
-    type: TablesTypes.CHANGE_TABLE_STATUS , payload: TableProps
+  type: TablesTypes.CHANGE_TABLE_STATUS
+  payload: TableProps
 }
 
 export enum TablesCurrentState {
-    AVAILABLE = "available",
-    OCCUPIED = "occupied",
-    RESERVED = "reserved",
+  AVAILABLE = "available",
+  OCCUPIED = "occupied",
+  RESERVED = "reserved",
 }

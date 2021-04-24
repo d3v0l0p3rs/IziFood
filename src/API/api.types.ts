@@ -1,5 +1,9 @@
 export enum Entities {
-  TABLE = "table/"
+  TABLE = "table/",
+}
+
+export enum Routes {
+  LOGIN = "login/",
 }
 
 export type Table = {

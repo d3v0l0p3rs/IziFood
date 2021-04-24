@@ -9,7 +9,7 @@ const Table: React.FC<TableProps> = (props: TableProps) => {
   const dispatch = useDispatch()
 
   const setTableStatus = (table: TableProps, state: TableState) => {
-    dispatch(changeTableStatus({...table, state: state}))
+    dispatch(changeTableStatus({ ...table, state: state }))
   }
 
   return (
@@ -22,17 +22,23 @@ const Table: React.FC<TableProps> = (props: TableProps) => {
           variant={props.state === "available" ? "contained" : "text"}
           onClick={() => setTableStatus(props, "available")}
           disabled={props.state === "available"}
-        >Disponible</Button>
+        >
+          Disponible
+        </Button>
         <Button
           variant={props.state === "occupied" ? "contained" : "text"}
           onClick={() => setTableStatus(props, "occupied")}
           disabled={props.state === "occupied"}
-        >Ocupada</Button>
+        >
+          Ocupada
+        </Button>
         <Button
           variant={props.state === "reserved" ? "contained" : "text"}
           onClick={() => setTableStatus(props, "reserved")}
           disabled={props.state === "reserved"}
-        >Reservada</Button>
+        >
+          Reservada
+        </Button>
       </ButtonGroup>
     </div>
   )

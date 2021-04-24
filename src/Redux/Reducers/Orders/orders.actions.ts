@@ -1,5 +1,5 @@
-import {OrdersActions, OrdersTypes} from "./orders.types"
-import {CardProps} from "../../../Components/App/Components/Card/card.types"
+import { OrdersActions, OrdersTypes } from "./orders.types"
+import { CardProps } from "../../../Components/App/Components/Card/card.types"
 
 export function changeOrderStatus(orders: CardProps[]): OrdersActions {
   return {
@@ -9,14 +9,14 @@ export function changeOrderStatus(orders: CardProps[]): OrdersActions {
 }
 
 export function setAddOrderFormVisible(show: boolean): OrdersActions {
-  return{
+  return {
     type: OrdersTypes.SET_ADD_ORDER_FORM_VISIBLE,
     payload: show,
   }
 }
 
 export function addOrder(data: CardProps[]): OrdersActions {
-  return{
+  return {
     type: OrdersTypes.SET_ADD_ORDER,
     payload: data,
   }

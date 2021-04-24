@@ -6,11 +6,13 @@ const initialState: TablesState = {
       id: 1,
       bill: 1,
       state: "available",
-    }, {
+    },
+    {
       id: 2,
       bill: 2,
       state: "occupied",
-    }, {
+    },
+    {
       id: 3,
       bill: 3,
       state: "reserved",
@@ -18,17 +20,13 @@ const initialState: TablesState = {
   ],
 }
 
-
-export default function tablesReducer(
-  state: TablesState = initialState,
-  action: TablesActions,
-): TablesState {
+export default function tablesReducer(state: TablesState = initialState, action: TablesActions): TablesState {
   switch (action.type) {
     case TablesTypes.CHANGE_TABLE_STATUS: {
       return {
         ...state,
-        tables: state.tables.map(
-          table => table.id === action.payload.id ? {...table, state: action.payload.state} : table,
+        tables: state.tables.map((table) =>
+          table.id === action.payload.id ? { ...table, state: action.payload.state } : table,
         ),
       }
     }

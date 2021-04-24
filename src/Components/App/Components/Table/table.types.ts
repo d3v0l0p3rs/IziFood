@@ -4,4 +4,4 @@ export interface TableProps {
   state: TableState
 }
 
-export type TableState = "available" | "occupied" | "reserved";
+export type TableState = "available" | "occupied" | "reserved"

@@ -1,4 +1,4 @@
-import {OrdersState, OrdersActions, OrdersTypes} from "./orders.types"
+import { OrdersState, OrdersActions, OrdersTypes } from "./orders.types"
 
 const initialState: OrdersState = {
   orders: [
@@ -7,9 +7,9 @@ const initialState: OrdersState = {
       productList: ["Papitas"],
       client: "Andros",
       phone: "123456",
-      note : "Extra salsa",
+      note: "Extra salsa",
       address: "Carrera careverga",
-      neighborhood : "Calima",
+      neighborhood: "Calima",
       cost: 1234,
       deliveryType: "tipo1",
       currentState: "in_progress",
@@ -19,9 +19,9 @@ const initialState: OrdersState = {
       productList: ["Salchipapa"],
       client: "Andros",
       phone: "123456",
-      note : "Extra salsa",
+      note: "Extra salsa",
       address: "Carrera careverga",
-      neighborhood : "Calima",
+      neighborhood: "Calima",
       cost: 1234,
       deliveryType: "tipo1",
       currentState: "on_hold",
@@ -33,7 +33,7 @@ const initialState: OrdersState = {
       phone: "123456",
       note: "adasdasd",
       address: "Carrera careverga",
-      neighborhood : "Calima",
+      neighborhood: "Calima",
       cost: 1234,
       deliveryType: "tipo1",
       currentState: "on_hold",
@@ -42,13 +42,8 @@ const initialState: OrdersState = {
   showAddOrderForm: false,
 }
 
-
-export default function OrdersReducer(
-  state: OrdersState = initialState,
-  action: OrdersActions,
-): OrdersState {
+export default function OrdersReducer(state: OrdersState = initialState, action: OrdersActions): OrdersState {
   switch (action.type) {
-
     case OrdersTypes.CHANGE_ORDER_STATUS: {
       return {
         ...state,

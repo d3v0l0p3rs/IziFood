@@ -1,36 +1,32 @@
 import React, { useState } from "react"
-import { loginUser } from "./login"
+import { useHistory } from "react-router-dom"
+import { authenticate } from "../../../../API/auth"
 import "./style.scss"
 
-export default function Login({ setToken }: any): JSX.Element {
-  const [username, setUserName] = useState<string>()
-  const [password, setPassword] = useState<string>()
+export default function Login(): JSX.Element {
+  const [username, setUserName] = useState<string>("")
+  const [password, setPassword] = useState<string>("")
 
-  const handleSubmit = async (e: any) => {
-    e.preventDefault()
-    const token = await loginUser({
-      username,
-      password,
-    })
-    setToken(token)
+  const history = useHistory()
+
+  const login = async () => {
+    authenticate(username, password).then(() => history.push("/"))
   }
 
-  return(
+  return (
     <div className="login-wrapper">
       <h1>Iniciar sesión</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <p>Username</p>
-          <input type="text" onChange={e => setUserName(e.target.value)} />
-        </label>
-        <label>
-          <p>Password</p>
-          <input type="password" onChange={e => setPassword(e.target.value)} />
-        </label>
-        <div>
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+      <label>
+        <p>Username</p>
+        <input type="text" onChange={(e) => setUserName(e.target.value)} />
+      </label>
+      <label>
+        <p>Password</p>
+        <input type="password" onChange={(e) => setPassword(e.target.value)} />
+      </label>
+      <div>
+        <button onClick={login}>Login</button>
+      </div>
     </div>
   )
 }

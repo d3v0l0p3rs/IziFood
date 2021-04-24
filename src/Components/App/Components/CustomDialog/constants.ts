@@ -12,11 +12,11 @@ export const CREATE_ORDER_FORM_LABELS = {
 export const CREATE_ORDERS_FORMS_NAMES = {
   id: "id",
   productList: "productList",
-  note : "note",
+  note: "note",
   client: "client",
   phone: "phone",
   address: "address",
-  neighborhood : "neighborhood",
+  neighborhood: "neighborhood",
   cost: "cost",
   deliveryType: "deliveryType",
   currentState: "currentState",

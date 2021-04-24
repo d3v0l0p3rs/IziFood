@@ -1,20 +1,25 @@
 import React from "react"
 import "./styles.scss"
-import Home from "./Screens/Home"
+import Deliveries from "./Screens/Deliveries"
+import Tables from "./Screens/Tables"
 import Login from "./Screens/Login"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { isAuthenticated, LoginRoute, PrivateRoute } from "../../API/auth"
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom"
+import { Routes } from "../../API/routes"
 
 export default function App(): JSX.Element {
   return (
     <div className="app-wrapper">
       <Router>
         <Switch>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <LoginRoute path={Routes.login} component={Login} />
+          <PrivateRoute path={Routes.deliveries} component={Deliveries} />
+          <PrivateRoute path={Routes.tables} component={Tables} />
+          <Route path="/" component={() => (<>
+            <div><Link to={Routes.login}>LOGIN</Link> Can access? {!isAuthenticated() ? "Yes" : "No"}</div>
+            <div><Link to={Routes.deliveries}>DELIVERIES</Link> Can access? {isAuthenticated() ? "Yes" : "No"}</div>
+            <div><Link to={Routes.tables}>TABLES</Link> Can access? {isAuthenticated() ? "Yes" : "No"}</div>
+          </>)} />
         </Switch>
       </Router>
     </div>

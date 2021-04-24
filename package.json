@@ -25,6 +25,7 @@
     "eject": "react-scripts eject",
     "sethooks": "cp scripts/pre-push.git ./.git/hooks/pre-push && chmod 755 ./.git/hooks/pre-push",
     "lint": "node_modules/.bin/eslint --ext .js,.jsx,.ts,.tsx src --color",
+    "prettier": "node_modules/.bin/prettier 'src/**/*.ts*' --write",
     "lint-fix": "npm run lint -- --fix",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -62,6 +63,7 @@
     "@typescript-eslint/parser": "^4.14.0",
     "eslint": "^7.18.0",
     "eslint-plugin-react": "^7.22.0",
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.1.0",
+    "prettier": "^2.2.1"
   }
 }

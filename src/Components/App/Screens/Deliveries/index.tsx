@@ -12,8 +12,6 @@ import AddIcon from "@material-ui/icons/Add"
 import CustomDialog from "../../Components/CustomDialog"
 import { setAddOrderFormVisible } from "../../../../Redux/Reducers/Orders/orders.actions"
 import { rootState } from "../../../../Redux/Store"
-import Table from "../../Components/Table"
-import { tablesSelector } from "../../../../Redux/Reducers/Tables/tables.selectors"
 
 const Home: React.FC = () => {
   const dispatch = useDispatch()
@@ -26,17 +24,11 @@ const Home: React.FC = () => {
   const pendingOrders = useSelector(pendingOrdersSelector, () => false)
   const cookingOrders = useSelector(cookingOrdersSelector, () => false)
   const readyOrders = useSelector(readyOrdersSelector, () => false)
-  const tables = useSelector(tablesSelector, () => false)
 
-  const showAddOrderForm = useSelector(
-    (state: rootState) => state.ordersReducer.showAddOrderForm,
-  )
+  const showAddOrderForm = useSelector((state: rootState) => state.ordersReducer.showAddOrderForm)
 
   const onSaveForm = useCallback(() => alert("positive"), [])
-  const onCancelSaveForm = useCallback(
-    () => dispatch(setAddOrderFormVisible(false)),
-    [dispatch],
-  )
+  const onCancelSaveForm = useCallback(() => dispatch(setAddOrderFormVisible(false)), [dispatch])
 
   return (
     <div className="main-wrapper">
@@ -47,29 +39,12 @@ const Home: React.FC = () => {
       </div>
 
       <div className="fab-wapper">
-        <Fab
-          className="custom-fab"
-          onClick={() => dispatch(setAddOrderFormVisible(true))}
-        >
+        <Fab className="custom-fab" onClick={() => dispatch(setAddOrderFormVisible(true))}>
           <AddIcon />
         </Fab>
       </div>
 
-      <CustomDialog
-        show={showAddOrderForm}
-        positiveAction={onSaveForm}
-        negativeAction={onCancelSaveForm}
-      />
-      <div>
-        {tables.map(table => (
-          <Table
-            key={table.id}
-            id={table.id}
-            bill={table.bill}
-            state={table.state}
-          ></Table>
-        ))}
-      </div>
+      <CustomDialog show={showAddOrderForm} positiveAction={onSaveForm} negativeAction={onCancelSaveForm} />
     </div>
   )
 }
